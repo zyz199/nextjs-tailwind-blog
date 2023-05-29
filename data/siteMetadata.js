@@ -5,7 +5,7 @@ const siteMetadata = {
   description: '分享学习过程中的点点滴滴，记录个人学习成长历程。',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: '',
+  siteUrl: 'https://wiki-ylyt.vercel.app/',
   siteRepo: 'https://github.com/zyz199/nextjs-tailwind-blog',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
