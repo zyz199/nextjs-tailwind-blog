@@ -18,7 +18,7 @@ const siteMetadata = {
     //如果要使用分析提供程序，则必须将其添加到。
     //`next.config.js`文件中的内容安全策略。
     // 支持 plausible, simpleAnalytics, umami or googleAnalytics
-    plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
+    plausibleDataDomain: '', // e.g. tailwind-nextjs-blog.vercel.app
     simpleAnalytics: false, // true or false
     umamiWebsiteId: '', // e.g. 123e4567-e89b-12d3-a456-426614174000
     googleAnalyticsId: process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS, // e.g. UA-000000-2 or G-XXXXXXX
