@@ -12,6 +12,7 @@ const siteMetadata = {
   socialBanner: '/static/images/twitter-card.png',
   email: 'zhangyz652@gmail.com',
   github: 'https://github.com/zyz199',
+  telegram: 'https://t.me/zyz199/',
   locale: 'zh-CN',
   welcome: '自在，轻盈，我本不想停留',
   analytics: {

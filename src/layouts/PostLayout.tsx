@@ -35,8 +35,7 @@ interface Props {
 
 export default function PostLayout(props: Props) {
   const { frontMatter, authorDetails, next, prev, children } = props
-  const { slug, fileName, date, title, tags, images } = frontMatter
-  const src = Array.isArray(images) ? images[0] : images
+  const { slug, fileName, date, title, tags } = frontMatter
 
   return (
     <SectionContainer>
@@ -101,11 +100,7 @@ export default function PostLayout(props: Props) {
               <TOCInline asDisclosure={false} toc={props.toc} />
             </div>
             <div className="xl:col-span-3 xl:row-span-2 xl:pb-0">
-              {src ? (
-                <div className="mt-6">
-                  <img alt={title} className="w-full rounded object-cover shadow-lg" src={src} />
-                </div>
-              ) : null}
+              <div className="mt-6"></div>
               <div className="prose max-w-none break-words pt-10 pb-8 dark:prose-dark">
                 {children}
               </div>
