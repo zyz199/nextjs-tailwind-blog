@@ -31,7 +31,7 @@ layout: PostLayout
 
 `ref`可以直接设置为字符串值，这种方式基本不推荐使用，或者在未来的`React`版本中不会再支持该方式。这主要是因为使用字符串导致的一些问题，例如当`ref`定义为`string`时，需要`React`追踪当前正在渲染的组件，在`reconciliation`阶段，`React Element`创建和更新的过程中，`ref`会被封装为一个闭包函数，等待`commit`阶段被执行，这会对`React`的性能产生一些影响等。
 
-```
+```ts
 class InputOne extends React.Component {
     componentDidMount() {
         this.refs.inputRef.value = 1;
@@ -53,7 +53,7 @@ class InputOne extends React.Component {
 
 `Callback Ref`我们通常会使用内联函数的形式，那么每次渲染都会重新创建，由于`React`会清理旧的`ref`然后设置新的，因此更新期间会调用两次，第一次为`null`，如果在`Callback`中带有业务逻辑的话，可能会出错，可以通过将`Callback`定义成类成员函数并进行绑定的方式避免。
 
-```
+```ts
 class InputTwo extends React.Component {
     componentDidMount() {
         this.inputRef.value = 2;

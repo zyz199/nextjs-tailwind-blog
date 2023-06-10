@@ -1,8 +1,8 @@
 ---
 title: Nest.js 高级之Module
-date: 2023/04/17 18:03:16
+date: 2023/05/17 18:03:16
 slug: 003-nest-basic-module-learn
-lastmod: 2023/04/17 21:37:54
+lastmod: 2023/05/17 21:37:54
 tags: [NestJs]
 draft: false
 summary: Nest.js 高级之Module

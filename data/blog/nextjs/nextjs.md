@@ -47,7 +47,7 @@ export default class App extends Component {
 
 &#8195;&#8195;注意：**Link 组件下的 children 只能是单独的一个，而不能是多个子节点**，因为 Link 组件是给他的子节点增加点击事件，如果需要给多个组件绑定点击事件，可以用一个根节点包裹起来，比如：
 
-```javascript
+```js
 import React, { Component, Fragment } from 'react'
 import Link from 'next/link'
 export default class App extends Component {
@@ -70,7 +70,7 @@ export default class App extends Component {
 
 &#8195;&#8195;编程式路由跳转需要借助 next 的 router 模块，使用方法和`react-router-dom`的`history`模式一样，可以通过`push、replace`等等方法进行跳转
 
-```javascript
+```js
 import React, { Component, Fragment } from 'react'
 import Router from 'next/router'
 export default class App extends Component {
@@ -98,7 +98,7 @@ export default class App extends Component {
 &#8195;&#8195;动态路由指的是：切换页面时我们需要给下一个页面传递一些参数，页面根据这些参数进行相关的渲染。  
 &#8195;&#8195;在`react-router-dom`中我们可以使用`params`和`query`的方式进行动态数据的传递，而在 next 的动态路由跳转中则只能使用`query`来传递相关参数。
 
-```javascript
+```js
 // index.js
 import React, {Component, Fragment} from 'react'
 import Link from 'next/link'
@@ -159,7 +159,7 @@ export default withRouter(App)
 
 &#8195;&#8195;在 next 的 Router 对象中我们也可以使用路由映射使客户端显示的路径变得更加简洁。即在`push`或其他方式进行跳转的时候传入第二个路径，这个路径就是在客户端地址栏显示的路径。
 
-```javascript
+```js
 import React, { Component, Fragment } from 'react'
 import Router from 'next/router'
 import Link from 'next/link'
@@ -200,7 +200,7 @@ export default class App extends Component {
 &#8195;&#8195;路由映射存在的问题就是在于对服务器发起请求的与否，所以我们需要在使用路由映射跳转的时候，需要使用`koa`进行相关的拦截，然后更新服务端的路径  
 &#8195;&#8195;以下例子是 koa 集成 next 服务器的例子：
 
-```javascript
+```js
 const Koa = require('koa')
 const next = require('next')
 const Router = require('koa-router')
@@ -251,7 +251,7 @@ app.prepare().then(() => {
 5. hashChangeStart：启用 hash 路由时，在开始跳转时触发
 6. hashChangeComplete：启用 hash 路由时，在跳转成功后触发。
 
-```javascript
+```js
 // index.js
 const events = [
     'routeChangeStart',
@@ -282,7 +282,7 @@ componentDidMount() {
 &#8195;&#8195;这时候打开我们的浏览器调试工具`network`，点击 a 页面请求的`preview`，我们可以很清楚的看到有个返回的数据是有刚刚在`getInitProps`方法返回的数据的，这是因为 react 的服务端渲染有一个`hydrate`方法，他会复用我们在服务端已经渲染好的 html。  
 &#8195;&#8195;注意：`getInitialProps`方法在服务端和客户端都仅仅只执行一次。
 
-```javascript
+```js
 import React, { Component, Fragment } from 'react'
 import Router, { withRouter } from 'next/router'
 class App extends Component {
@@ -320,7 +320,7 @@ export default withRouter(App)
 
 &#8195;&#8195;传递自定义数据即执行每个对象上得`getInitialProps`方法，然后传递到`Component`页面。
 
-```javascript
+```js
 import App from 'next/app'
 import 'antd/dist/antd.css'
 
@@ -348,7 +348,7 @@ export default myApp
 
 #### 固定 Layout
 
-```javascript
+```js
 import React from 'react'
 import App from 'next/app'
 
@@ -375,7 +375,7 @@ export default class MyApp extends App {
 
 &#8195;&#8195;`_document`文件只会在服务端渲染的时候才会被调用，是用来修改服务端渲染的文档内容，一般来配合第三方`css-in-js`方案使用
 
-```javascript
+```js
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import React from 'react'
 
@@ -423,7 +423,7 @@ export class MyDocument extends Document {
 
 `_document.js`:
 
-```javascript
+```js
 import Document from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
 
@@ -457,7 +457,7 @@ export default class MyDocument extends Document {
 
 `test.js`
 
-```javascript
+```js
 import React, { Component, Fragment } from 'react'
 import styled from 'styled-components'
 const Span = styled.span`
@@ -481,7 +481,7 @@ export default class App extends Component {
 
 #### 异步加载模块
 
-```javascript
+```js
 import React, { Component, Fragment } from 'react'
 class App extends Component {
   static getInitialProps = async () => {
@@ -514,7 +514,7 @@ export default App
 
 #### 异步加载组件
 
-```javascript
+```js
 import React, { Component, Fragment } from 'react'
 
 import dynamic from 'next/dynamic'

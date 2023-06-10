@@ -1,8 +1,8 @@
 ---
 title: Nest.js 入门之Controller
-date: 2023/05/11 18:03:16
+date: 2023/05/21 18:03:16
 slug: 001-nest-basic-class-learn
-lastmod: 2021/12/21 21:37:54
+lastmod: 2023/05/21 21:37:54
 tags: [NestJs]
 draft: false
 summary: Nest.js 入门之Controller

@@ -1,8 +1,8 @@
 ---
 title: Nest.js 高级之Exception filter
-date: 2023/04/11 18:03:16
+date: 2023/05/11 18:03:16
 slug: 002-nest-high-exception-filter-learn
-lastmod: 2023/04/11 21:37:54
+lastmod: 2023/05/11 21:37:54
 tags: [NestJs]
 draft: false
 summary: Nest.js 高级之Exception filter

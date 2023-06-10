@@ -1,8 +1,8 @@
 ---
 title: Nest.js 基础之NestFactory
-date: 2023/04/19 18:03:16
+date: 2023/05/19 18:03:16
 slug: 003-nest-basic-nestfactory-learn
-lastmod: 2023/04/19 21:37:54
+lastmod: 2023/05/19 21:37:54
 tags: [NestJs]
 draft: false
 summary: Nest.js 基础之NestFactory

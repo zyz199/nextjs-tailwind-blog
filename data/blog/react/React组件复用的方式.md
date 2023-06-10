@@ -33,7 +33,7 @@ layout: PostLayout
 
 上古版本示例，一个通用的场景是`: `一个组件需要定期更新，用`setInterval()`做很容易，但当不需要它的时候取消定时器来节省内存是非常重要的，`React`提供生命周期方法来告知组件创建或销毁的时间，下面的`Mixin`，使用`setInterval()`并保证在组件销毁时清理定时器。
 
-```
+```ts
 var SetIntervalMixin = {
   componentWillMount: function() {
     this.intervals = [];

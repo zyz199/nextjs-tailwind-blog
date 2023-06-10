@@ -6,7 +6,6 @@ import { BlogSEO } from '@/components/SEO'
 import Image from '@/components/Image'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
-import Comments from '@/components/comments'
 import ScrollTopAndComment from '@/components/ScrollTopAndComment'
 import ProgressBar from '@/components/ProgressBar'
 import TOCInline from '@/components/TOCInline'
@@ -104,7 +103,6 @@ export default function PostLayout(props: Props) {
               <div className="prose max-w-none break-words pt-10 pb-8 dark:prose-dark">
                 {children}
               </div>
-              <Comments frontMatter={frontMatter} />
             </div>
             <footer>
               <div className="divide-gray-200 text-sm font-medium leading-5 dark:divide-gray-700 xl:col-start-1 xl:row-start-2 xl:divide-y">
