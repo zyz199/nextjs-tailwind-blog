@@ -551,7 +551,3 @@ class App extends Component {
 
 export default App
 ```
-
-### next 服务端渲染流程
-
-![SSR渲染流程](./public/static/SSR渲染流程.jpg)
